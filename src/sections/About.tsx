@@ -1,8 +1,12 @@
-import { Award, Users, Zap, FileText, Trophy } from 'lucide-react';
+import { Award, Users, Zap, FileText, Trophy, FileDown } from 'lucide-react';
 
 export default function About() {
   const handleBrochureClick = () => {
     window.open('https://example.com/citius-2025-26-brochure.pdf', '_blank');
+  };
+
+  const handleCommitteeClick = () => {
+    window.open('https://drive.google.com/file/d/1W9LHFBzNqN2OfAwT2XBnyR7nPWzdSgK6/view?usp=sharing', '_blank');
   };
 
   return (
@@ -71,6 +75,29 @@ export default function About() {
           <h3 className="text-3xl font-bold mb-4">Organized By</h3>
           <p className="text-xl mb-2">Physical Education & Sports Section</p>
           <p className="text-lg text-blue-100">National Institute of Technology, Kurukshetra</p>
+        </div>
+
+        <div className="mt-16 animate-fade-in">
+          <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 md:p-12 border border-slate-200">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-gray-900 mb-3">Organizing Committee</h3>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Meet the dedicated team of faculty and coordinators organizing CITIUS. View the complete list of committee members and their roles.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <button
+                onClick={handleCommitteeClick}
+                className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-slate-700 to-slate-800 text-white rounded-lg font-semibold text-lg hover:from-slate-800 hover:to-slate-900 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <FileDown size={24} />
+                <span>View Full Organizing Committee</span>
+              </button>
+              <p className="text-sm text-gray-500 mt-2">
+                Click to view the official committee member list
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
